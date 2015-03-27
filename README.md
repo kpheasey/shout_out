@@ -60,7 +60,7 @@ class InvoiceShout < ApplicationShout
 
   def touch_report_ffa_efficiency
     if record.total_ffa_changed? && calculable? && !record.report_ffa_efficiency.new_record?
-      record.report_ffa_efficiency.shout
+      record.report_ffa_efficiency.touch
     end
   end
 
@@ -68,7 +68,7 @@ class InvoiceShout < ApplicationShout
     changed = record.total_ffa_changed? || work_type_changed?(WorkType.codes[:ffa])
 
     if changed && calculable? && record.report_ffa_hour_tracker
-      record.report_ffa_hour_tracker.shout
+      record.report_ffa_hour_tracker.touch
     end
   end
 
@@ -76,7 +76,7 @@ class InvoiceShout < ApplicationShout
     changed = record.product_comp_changed? || record.product_cost_changed? || record.labor_comp_changed?
 
     if changed && calculable? && record.project
-      record.project.shout
+      record.project.touch
     end
   end
 
