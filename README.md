@@ -102,6 +102,7 @@ class ApplicationShout
   end
 
 end
+```
 
 ## Contributing
 
