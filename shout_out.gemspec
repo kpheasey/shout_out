@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ['Kevin Pheasey']
   spec.email         = ['kevin.pheasey@gmail.com']
   spec.summary       = %q{Complex ActiveRecord callback abstraction.}
-  spec.homepage      = ''
+  spec.homepage      = 'https://github.com/kpheasey/shout_out'
   spec.license       = 'MIT'
 
   spec.files         = `git ls-files -z`.split("\x0")
