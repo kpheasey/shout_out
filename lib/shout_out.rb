@@ -6,8 +6,8 @@ module ShoutOut
 
   included do
     after_initialize -> { shout(:after_initialize, self) }
-    after_find -> shout(:after_find, self) }
-    after_touch -> shout(:after_touch, self) }
+    after_find -> { shout(:after_find, self) }
+    after_touch -> { shout(:after_touch, self) }
     before_validation -> { shout(:before_validation, self) }
     validate -> { shout(:validate, self) }
     after_validation -> { shout(:after_validation, self) }
